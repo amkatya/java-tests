@@ -4,10 +4,10 @@ package com.example.tests;
 import org.testng.annotations.Test;
 
 public class ContactCreationTests extends TestBase {
+	
   @Test
   public void testNonEmptyContactCreation() throws Exception {
-	app.navigationHelper.openMainPage();
-    app.contactHelper.initContactCreation();
+	
     ContactData contact = new ContactData();
     contact.firstname = "firstname";
     contact.lastname = "lastname";
@@ -22,18 +22,20 @@ public class ContactCreationTests extends TestBase {
     contact.byear = "1995";
     contact.secondaryaddress = "secondary address";
     contact.secondaryphone = "secondary phone";
-    
-	app.contactHelper.fillContactForm(app, this, contact);
-    app.contactHelper.submitContactCreation();
-    app.contactHelper.returnToHomePage();
+    app.getNavigationHelper().openMainPage();
+    app.getContactHelper().initContactCreation();
+    app.getContactHelper().fillContactForm(contact);
+    app.getContactHelper().submitContactCreation();
+    app.getContactHelper().returnToHomePage();
   }
   
   @Test
   public void testEmptyContactCreation() throws Exception {
-	app.navigationHelper.openMainPage();
-    app.contactHelper.initContactCreation();
-    app.contactHelper.fillContactForm(app, this, new ContactData("", "", "", "", "", "", "", "", "-", "-", "", "", ""));
-    app.contactHelper.submitContactCreation();
-    app.contactHelper.returnToHomePage();
+	app.getNavigationHelper().openMainPage();
+    app.getContactHelper().initContactCreation();
+    app.getContactHelper().fillContactForm(new ContactData("", "", "", "", "", "", "", "", "-", "-", "", "", ""));
+    //app, this, оепед new ContactData
+    app.getContactHelper().submitContactCreation();
+    app.getContactHelper().returnToHomePage();
   }
 }
