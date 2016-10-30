@@ -14,7 +14,7 @@ public class GroupCreationTests extends TestBase {
     group.footer = "footer 1";
 	app.getGroupHelper().fillGroupForm(group);
     app.getGroupHelper().submitGroupCreation();
-    app.getNavigationHelper().gotoGroupsPage();
+    app.getGroupHelper().returntoGroupPage();
   }
 
   @Test
@@ -24,6 +24,6 @@ public class GroupCreationTests extends TestBase {
     app.getGroupHelper().initGroupCreation();
     app.getGroupHelper().fillGroupForm(new GroupData("", "", ""));
     app.getGroupHelper().submitGroupCreation();
-    app.getNavigationHelper().gotoGroupsPage();
+    app.getGroupHelper().returntoGroupPage();
   }
 }

@@ -39,5 +39,13 @@ public class ContactHelper extends HelperBase {
 	public void returnToHomePage() {
 		driver.findElement(By.linkText("home page")).click();
 	}
+	
+	public void submitContactModification() {
+		click(By.name("update"));		
+	}
+	
+	public void deleteContact() {
+		click(By.name("delete"));
+	}
 
 }

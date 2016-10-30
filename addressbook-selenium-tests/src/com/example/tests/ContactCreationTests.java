@@ -34,7 +34,7 @@ public class ContactCreationTests extends TestBase {
 	app.getNavigationHelper().openMainPage();
     app.getContactHelper().initContactCreation();
     app.getContactHelper().fillContactForm(new ContactData("", "", "", "", "", "", "", "", "-", "-", "", "", ""));
-    //app, this, оепед new ContactData
+    //АШКН: app, this, оепед new ContactData
     app.getContactHelper().submitContactCreation();
     app.getContactHelper().returnToHomePage();
   }

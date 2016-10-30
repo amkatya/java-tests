@@ -30,16 +30,16 @@ public abstract class HelperBase {
 	public String closeAlertAndGetItsText() {
 	    try {
 	      Alert alert = driver.switchTo().alert();
-	      //String alertText = alert.getText();
-	      //такой строки нет String alertText = alert.getText()
+	      //в примере: Alert alert = driver.switchTo().alert();
+	      //у меня было: String alertText = alert.getText()
 	      if (acceptNextAlert) {
 	        alert.accept();
 	      } else {
 	        alert.dismiss();
 	      }
 	      return alert.getText();
-	      //и здесь: return alert.getText();
-	      //у меня: return alertText;
+	      //и здесь в примере: return alert.getText();
+	      //у меня было: return alertText;
 	    } finally {
 	      acceptNextAlert = true;
 	    }
