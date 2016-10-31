@@ -47,5 +47,8 @@ public class ContactHelper extends HelperBase {
 	public void deleteContact() {
 		click(By.name("delete"));
 	}
-
+	//img[@alt='Edit']
+	//https://addons.mozilla.org/en-us/firefox/addon/element-locator-for-webdriv/
+	//http://learn-automation.com/how-to-write-dynamic-xpath-in-selenium/
+	
 }
