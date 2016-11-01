@@ -47,7 +47,14 @@ public class ContactHelper extends HelperBase {
 	public void deleteContact() {
 		click(By.name("delete"));
 	}
+		
+	//public void editContactByIndex(int index) {
+	//	click(By.xpath("//img[@alt='Edit'])[" + index + "]"));
+	//}
 	//img[@alt='Edit']
+	//xpath=(//img[@alt='Edit'])[7]
+	//img[@alt='Edit[]'][7]
+	
 	//https://addons.mozilla.org/en-us/firefox/addon/element-locator-for-webdriv/
 	//http://learn-automation.com/how-to-write-dynamic-xpath-in-selenium/
 	
