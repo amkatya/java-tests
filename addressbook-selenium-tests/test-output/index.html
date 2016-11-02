@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\eem\AppData\Local\Temp\testng-eclipse--76129254\testng-customsuite.xml</span>
+                    <span>C:\Users\eem\AppData\Local\Temp\testng-eclipse-1493316766\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -127,31 +127,12 @@
                   <a name="modifySomeContact">
                   </a> <!-- modifySomeContact -->
                   <span class="method-name">modifySomeContact</span>
-                  <div class="stack-trace">org.openqa.selenium.InvalidSelectorException: The given selector //img[@alt=&apos;Edit&apos;])[7] is either invalid or does not result in a WebElement. The following error occurred:
-InvalidSelectorError: Unable to locate an element with the xpath expression //img[@alt=&apos;Edit&apos;])[7] because of the following error:
-SyntaxError: The expression is not a legal expression.
-Command duration or timeout: 21 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
-Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1&apos;, time: &apos;2016-06-30 17:37:03&apos;
-System info: host: &apos;DESKTOP-7R5CGPG&apos;, ip: &apos;192.168.155.72&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_101&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 4125265a-8adc-4199-91a9-ce6d91baf1ca
-*** Element info: {Using=xpath, value=//img[@alt=&apos;Edit&apos;])[7]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at com.example.fw.HelperBase.click(HelperBase.java:56)
-	at com.example.fw.ContactHelper.editContactByIndex(ContactHelper.java:52)
-	at com.example.tests.ContactModificationTests.modifySomeContact(ContactModificationTests.java:11)
+                  <div class="stack-trace">java.lang.NullPointerException
+	at org.openqa.selenium.support.ui.Quotes.escape(Quotes.java:42)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:115)
+	at com.example.fw.HelperBase.selectByText(HelperBase.java:60)
+	at com.example.fw.ContactHelper.fillContactForm(ContactHelper.java:26)
+	at com.example.tests.ContactModificationTests.modifySomeContact(ContactModificationTests.java:13)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -176,19 +157,6 @@ Session ID: 4125265a-8adc-4199-91a9-ce6d91baf1ca
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-Caused by: org.openqa.selenium.InvalidSelectorException: The given selector //img[@alt=&apos;Edit&apos;])[7] is either invalid or does not result in a WebElement. The following error occurred:
-InvalidSelectorError: Unable to locate an element with the xpath expression //img[@alt=&apos;Edit&apos;])[7] because of the following error:
-SyntaxError: The expression is not a legal expression.
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
-Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1&apos;, time: &apos;2016-06-30 17:37:03&apos;
-System info: host: &apos;DESKTOP-7R5CGPG&apos;, ip: &apos;192.168.155.72&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_101&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.annotateInvalidSelectorError_(file:///C:/Users/eem/AppData/Local/Temp/anonymous3558923838049649936webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10744)
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/eem/AppData/Local/Temp/anonymous3558923838049649936webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10775)
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/eem/AppData/Local/Temp/anonymous3558923838049649936webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10779)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/eem/AppData/Local/Temp/anonymous3558923838049649936webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/eem/AppData/Local/Temp/anonymous3558923838049649936webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12666)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/eem/AppData/Local/Temp/anonymous3558923838049649936webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12608)
 
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -198,7 +166,7 @@ Driver info: driver.version: unknown
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\eem\AppData\Local\Temp\testng-eclipse--76129254\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\eem\AppData\Local\Temp\testng-eclipse-1493316766\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -251,12 +219,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'modifySomeContact')
 data.setCell(0, 2, 'com.example.tests.ContactModificationTests')
-data.setCell(0, 3, 249);
+data.setCell(0, 3, 668);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 249 ms</span>
+              <span class="suite-total-time">Total running time: 668 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -291,11 +259,11 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">modifySomeContact</span>
-                <span class="method-start">3503 ms</span>
+                <span class="method-start">3518 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">3766 ms</span>
+                <span class="method-start">4190 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -7,12 +7,11 @@ public class ContactModificationTests extends TestBase {
 	@Test
 	public void modifySomeContact() {
 		app.getNavigationHelper().openMainPage();
-		//icon "edit" contact
-		// не верно app.getContactHelper().editContactByIndex(7);
+		app.getContactHelper().editContactById(1);
 		ContactData contact = new ContactData();
 		contact.firstname = "new firstname";
 		app.getContactHelper().fillContactForm(contact);
-		app.getContactHelper().submitContactModification();
+		app.getContactHelper().submitContactModification(1);
 		app.getContactHelper().returnToHomePage();
 	}
 

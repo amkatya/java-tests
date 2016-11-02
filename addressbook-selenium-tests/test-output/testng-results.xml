@@ -2,56 +2,24 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4231" started-at="2016-11-01T11:51:48Z" finished-at="2016-11-01T11:51:53Z">
+  <suite name="Default suite" duration-ms="4609" started-at="2016-11-02T18:04:23Z" finished-at="2016-11-02T18:04:27Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4231" started-at="2016-11-01T11:51:48Z" finished-at="2016-11-01T11:51:53Z">
+    <test name="Default test" duration-ms="4609" started-at="2016-11-02T18:04:23Z" finished-at="2016-11-02T18:04:27Z">
       <class name="com.example.tests.ContactModificationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactModificationTests@4de8b406]" name="setUp" is-config="true" duration-ms="3499" started-at="2016-11-01T14:51:48Z" finished-at="2016-11-01T14:51:52Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactModificationTests@4de8b406]" name="setUp" is-config="true" duration-ms="3514" started-at="2016-11-02T21:04:23Z" finished-at="2016-11-02T21:04:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="modifySomeContact()[pri:0, instance:com.example.tests.ContactModificationTests@4de8b406]" name="modifySomeContact" duration-ms="249" started-at="2016-11-01T14:51:52Z" finished-at="2016-11-01T14:51:52Z">
-          <exception class="org.openqa.selenium.InvalidSelectorException">
-            <message>
-              <![CDATA[The given selector //img[@alt='Edit'])[7] is either invalid or does not result in a WebElement. The following error occurred:
-InvalidSelectorError: Unable to locate an element with the xpath expression //img[@alt='Edit'])[7] because of the following error:
-SyntaxError: The expression is not a legal expression.
-Command duration or timeout: 21 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
-Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
-System info: host: 'DESKTOP-7R5CGPG', ip: '192.168.155.72', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 4125265a-8adc-4199-91a9-ce6d91baf1ca
-*** Element info: {Using=xpath, value=//img[@alt='Edit'])[7]}]]>
-            </message>
+        <test-method status="FAIL" signature="modifySomeContact()[pri:0, instance:com.example.tests.ContactModificationTests@4de8b406]" name="modifySomeContact" duration-ms="668" started-at="2016-11-02T21:04:26Z" finished-at="2016-11-02T21:04:27Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.InvalidSelectorException: The given selector //img[@alt='Edit'])[7] is either invalid or does not result in a WebElement. The following error occurred:
-InvalidSelectorError: Unable to locate an element with the xpath expression //img[@alt='Edit'])[7] because of the following error:
-SyntaxError: The expression is not a legal expression.
-Command duration or timeout: 21 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
-Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
-System info: host: 'DESKTOP-7R5CGPG', ip: '192.168.155.72', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 4125265a-8adc-4199-91a9-ce6d91baf1ca
-*** Element info: {Using=xpath, value=//img[@alt='Edit'])[7]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at com.example.fw.HelperBase.click(HelperBase.java:56)
-	at com.example.fw.ContactHelper.editContactByIndex(ContactHelper.java:52)
-	at com.example.tests.ContactModificationTests.modifySomeContact(ContactModificationTests.java:11)
+              <![CDATA[java.lang.NullPointerException
+	at org.openqa.selenium.support.ui.Quotes.escape(Quotes.java:42)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:115)
+	at com.example.fw.HelperBase.selectByText(HelperBase.java:60)
+	at com.example.fw.ContactHelper.fillContactForm(ContactHelper.java:26)
+	at com.example.tests.ContactModificationTests.modifySomeContact(ContactModificationTests.java:13)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -76,26 +44,13 @@ Session ID: 4125265a-8adc-4199-91a9-ce6d91baf1ca
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-Caused by: org.openqa.selenium.InvalidSelectorException: The given selector //img[@alt='Edit'])[7] is either invalid or does not result in a WebElement. The following error occurred:
-InvalidSelectorError: Unable to locate an element with the xpath expression //img[@alt='Edit'])[7] because of the following error:
-SyntaxError: The expression is not a legal expression.
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
-Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
-System info: host: 'DESKTOP-7R5CGPG', ip: '192.168.155.72', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
-Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.annotateInvalidSelectorError_(file:///C:/Users/eem/AppData/Local/Temp/anonymous3558923838049649936webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10744)
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/eem/AppData/Local/Temp/anonymous3558923838049649936webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10775)
-	at <anonymous class>.FirefoxDriver.prototype.findElement(file:///C:/Users/eem/AppData/Local/Temp/anonymous3558923838049649936webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10779)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/eem/AppData/Local/Temp/anonymous3558923838049649936webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///C:/Users/eem/AppData/Local/Temp/anonymous3558923838049649936webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12666)
-	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///C:/Users/eem/AppData/Local/Temp/anonymous3558923838049649936webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12608)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.InvalidSelectorException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- modifySomeContact -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactModificationTests@4de8b406]" name="tearDown" is-config="true" duration-ms="462" started-at="2016-11-01T14:51:52Z" finished-at="2016-11-01T14:51:53Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactModificationTests@4de8b406]" name="tearDown" is-config="true" duration-ms="417" started-at="2016-11-02T21:04:27Z" finished-at="2016-11-02T21:04:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

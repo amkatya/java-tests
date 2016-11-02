@@ -40,17 +40,20 @@ public class ContactHelper extends HelperBase {
 		driver.findElement(By.linkText("home page")).click();
 	}
 	
-	public void submitContactModification() {
-		click(By.name("update"));		
+	public void submitContactModification(int id) {
+		click(By.xpath("(//input[@name='update'])[1]"));		
 	}
 	
-	public void deleteContact() {
-		click(By.name("delete"));
-	}
 		
-	//public void editContactByIndex(int index) {
-	//	click(By.xpath("//img[@alt='Edit'])[" + index + "]"));
-	//}
+	public void editContactById(int id) {
+		click(By.xpath("//img[@alt='Edit'][" + id + "]"));
+	}
+
+	public void deleteContact(int id) {
+		click(By.xpath("//img[@alt='Edit'][" + id + "]"));
+		click(By.xpath("(//input[@name='update'])[2]"));
+		}
+	
 	//img[@alt='Edit']
 	//xpath=(//img[@alt='Edit'])[7]
 	//img[@alt='Edit[]'][7]
