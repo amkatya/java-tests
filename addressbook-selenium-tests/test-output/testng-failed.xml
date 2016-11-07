@@ -6,6 +6,7 @@
       <class name="com.example.tests.ContactRemovalTests">
         <methods>
           <include name="setUp"/>
+          <include name="deleteSomeContact"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.example.tests.ContactRemovalTests -->

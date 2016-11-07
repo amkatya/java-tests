@@ -1,5 +1,8 @@
 package com.example.fw;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.By;
 
 import com.example.tests.GroupData;
@@ -44,6 +47,12 @@ public class GroupHelper extends HelperBase {
 	
 	public void returntoGroupPage() {
 	    click(By.linkText("group page"));
+	}
+
+	public List<GroupData> getGroups() {
+		List<GroupData> groups = new ArrayList<GroupData>();
+		driver.findElements()
+		return groups;
 	}
 
 }
