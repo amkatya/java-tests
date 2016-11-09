@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import com.example.tests.GroupData;
 
@@ -51,7 +52,14 @@ public class GroupHelper extends HelperBase {
 
 	public List<GroupData> getGroups() {
 		List<GroupData> groups = new ArrayList<GroupData>();
-		driver.findElements()
+		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
+		for (WebElement checkbox : checkboxes) {
+			GroupData group = new GroupData();
+			String title = checkbox.getAttribute("title");
+			title.substring("Select (".length(), title.length() - ")".length());
+			group.name = ;
+			groups.add(group);
+		}
 		return groups;
 	}
 
