@@ -35,4 +35,5 @@ public class ContactData {
 		this.secondaryaddress = secondaryaddress;
 		this.secondaryphone = secondaryphone;
 	}
+	
 }
