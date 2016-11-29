@@ -15,6 +15,7 @@ public class ContactCreationTests extends TestBase {
 	
 	  
 	app.getNavigationHelper().openMainPage();
+	
 	// save old state
     List<ContactData> oldList =  app.getContactHelper().getContacts();
     

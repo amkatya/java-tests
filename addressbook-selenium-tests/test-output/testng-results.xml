@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="7634" started-at="2016-11-28T15:14:47Z" finished-at="2016-11-28T15:14:54Z">
+  <suite name="Default suite" duration-ms="584326" started-at="2016-11-29T15:38:27Z" finished-at="2016-11-29T15:48:11Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="7634" started-at="2016-11-28T15:14:47Z" finished-at="2016-11-28T15:14:54Z">
+    <test name="Default test" duration-ms="584326" started-at="2016-11-29T15:38:27Z" finished-at="2016-11-29T15:48:11Z">
       <class name="com.example.tests.ContactCreationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactCreationTests@7c0e2abd]" name="setUp" is-config="true" duration-ms="3801" started-at="2016-11-28T18:14:47Z" finished-at="2016-11-28T18:14:51Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactCreationTests@3aefe5e5]" name="setUp" is-config="true" duration-ms="4197" started-at="2016-11-29T18:38:27Z" finished-at="2016-11-29T18:38:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="testNonEmptyContactCreation()[pri:0, instance:com.example.tests.ContactCreationTests@7c0e2abd]" name="testNonEmptyContactCreation" duration-ms="3390" started-at="2016-11-28T18:14:51Z" finished-at="2016-11-28T18:14:54Z">
+        <test-method status="FAIL" signature="testNonEmptyContactCreation()[pri:0, instance:com.example.tests.ContactCreationTests@3aefe5e5]" name="testNonEmptyContactCreation" duration-ms="579531" started-at="2016-11-29T18:38:31Z" finished-at="2016-11-29T18:48:10Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Lists differ at element [0]: ContactData [firstname=firstname] != ContactData [firstname=new firstname 1 ] expected [ContactData [firstname=firstname]] but found [ContactData [firstname=new firstname 1 ]]]]>
@@ -23,7 +23,7 @@
 	at org.testng.Assert.assertEquals(Assert.java:125)
 	at org.testng.Assert.assertEquals(Assert.java:551)
 	at org.testng.Assert.assertEquals(Assert.java:516)
-	at com.example.tests.ContactCreationTests.testNonEmptyContactCreation(ContactCreationTests.java:50)
+	at com.example.tests.ContactCreationTests.testNonEmptyContactCreation(ContactCreationTests.java:51)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -54,7 +54,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testNonEmptyContactCreation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactCreationTests@7c0e2abd]" name="tearDown" is-config="true" duration-ms="434" started-at="2016-11-28T18:14:54Z" finished-at="2016-11-28T18:14:54Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactCreationTests@3aefe5e5]" name="tearDown" is-config="true" duration-ms="573" started-at="2016-11-29T18:48:10Z" finished-at="2016-11-29T18:48:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
