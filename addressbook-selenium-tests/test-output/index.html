@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\eem\AppData\Local\Temp\testng-eclipse--1977517751\testng-customsuite.xml</span>
+                    <span>C:\Users\eem\AppData\Local\Temp\testng-eclipse--1620227440\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -101,7 +101,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.ContactCreationTests" hash-for-method="testNonEmptyContactCreation">testNonEmptyContactCreation</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.ContactRemovalTests" hash-for-method="deleteSomeContact">deleteSomeContact</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -119,21 +119,21 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.example.tests.ContactCreationTests</span>
+              <span class="class-name">com.example.tests.ContactRemovalTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testNonEmptyContactCreation">
-                  </a> <!-- testNonEmptyContactCreation -->
-                  <span class="method-name">testNonEmptyContactCreation</span>
-                  <div class="stack-trace">java.lang.AssertionError: Lists differ at element [0]: ContactData [firstname=firstname] != ContactData [firstname=new firstname 1 ] expected [ContactData [firstname=firstname]] but found [ContactData [firstname=new firstname 1 ]]
+                  <a name="deleteSomeContact">
+                  </a> <!-- deleteSomeContact -->
+                  <span class="method-name">deleteSomeContact</span>
+                  <div class="stack-trace">java.lang.AssertionError: Lists differ at element [1]: ContactData [firstname= contact207824074] != ContactData [firstname=contact-1924864182 contact1456409728] expected [ContactData [firstname= contact207824074]] but found [ContactData [firstname=contact-1924864182 contact1456409728]]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
 	at org.testng.Assert.assertEquals(Assert.java:551)
 	at org.testng.Assert.assertEquals(Assert.java:516)
-	at com.example.tests.ContactCreationTests.testNonEmptyContactCreation(ContactCreationTests.java:51)
+	at com.example.tests.ContactRemovalTests.deleteSomeContact(ContactRemovalTests.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -167,7 +167,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\eem\AppData\Local\Temp\testng-eclipse--1977517751\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\eem\AppData\Local\Temp\testng-eclipse--1620227440\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -176,7 +176,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.example.tests.ContactCreationTests&quot;/&gt;
+      &lt;class name=&quot;com.example.tests.ContactRemovalTests&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -218,14 +218,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testNonEmptyContactCreation')
-data.setCell(0, 2, 'com.example.tests.ContactCreationTests')
-data.setCell(0, 3, 579531);
+data.setCell(0, 1, 'deleteSomeContact')
+data.setCell(0, 2, 'com.example.tests.ContactRemovalTests')
+data.setCell(0, 3, 2644);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 minutes</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -251,7 +251,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.example.tests.ContactCreationTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.example.tests.ContactRemovalTests</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
@@ -259,12 +259,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testNonEmptyContactCreation</span>
-                <span class="method-start">4203 ms</span>
+                <span class="method-name">deleteSomeContact</span>
+                <span class="method-start">3769 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">583750 ms</span>
+                <span class="method-start">6416 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -17,7 +17,7 @@ public class GroupCreationTests extends TestBase {
     app.getNavigationHelper().gotoGroupsPage();
     
     // save old state
-    List<GroupData> oldList =  app.getGroupHelper().getGroups();
+    List<GroupData> oldList = app.getGroupHelper().getGroups();
     
     // actions    
     app.getGroupHelper().initGroupCreation();
@@ -26,7 +26,7 @@ public class GroupCreationTests extends TestBase {
     app.getGroupHelper().returntoGroupPage();
     
     // save new state
-    List<GroupData> newList =  app.getGroupHelper().getGroups();
+    List<GroupData> newList = app.getGroupHelper().getGroups();
     
     // compare states  
     oldList.add(group);

@@ -3,61 +3,75 @@ package com.example.tests;
 
 import static org.testng.Assert.assertEquals;
 
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Random;
 
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class ContactCreationTests extends TestBase {
 	
-  @Test
-  public void testNonEmptyContactCreation() throws Exception {
+	@DataProvider
+	public Iterator<Object[]> randomValidContactGenerator() {
+		List<Object[]> list = new ArrayList<Object[]>();
+		for (int i = 0; i < 5; i++){
+			ContactData contact = new ContactData();
+			contact.firstname = generatorRandomString();	
+		    contact.lastname = generatorRandomString();
+		    contact.address = generatorRandomString();
+		    contact.homephone = generatorRandomString();
+		    contact.mobilephone = generatorRandomString();
+		    contact.workphone = generatorRandomString();
+		    contact.email1 = "";
+		    contact.emaill2 = "";
+		    contact.bday = "5";
+		    contact.bmonth = "May";
+		    contact.byear = "1985";
+		    contact.secondaryaddress = generatorRandomString();
+		    contact.secondaryphone = generatorRandomString();
+		    list.add(new Object[] {contact});
+		}
+		return list.iterator();
+	}
+	
+	public String generatorRandomString() {
+		Random rnd = new Random();
+		if (rnd.nextInt(10) == 0) {
+			return "";
+		} else {
+			return "contact" + rnd.nextInt();
+		}
+	}
+	
+	
+	
+  @Test (dataProvider = "randomValidContactGenerator")
+  public void testContactCreationWithValidData(ContactData contact) throws Exception {
 	
 	  
 	app.getNavigationHelper().openMainPage();
 	
 	// save old state
-    List<ContactData> oldList =  app.getContactHelper().getContacts();
+    List<ContactData> oldList = app.getContactHelper().getContacts();
     
     // actions 
 	app.getContactHelper().initContactCreation();	
-	ContactData contact = new ContactData();
-    contact.firstname = "firstname";
-    contact.lastname = "lastname";
-    contact.address = "address";
-    contact.homephone = "1234";
-    contact.mobilephone = "4567";
-    contact.workphone = "4321";
-    contact.email1 = "email@mail.com";
-    contact.emaill2 = "email2@mail.com";
-    contact.bday = "4";
-    contact.bmonth = "May";
-    contact.byear = "1995";
-    contact.secondaryaddress = "secondary address";
-    contact.secondaryphone = "secondary phone";
-    
 	app.getContactHelper().fillContactForm(contact);
     app.getContactHelper().submitContactCreation();
     app.getContactHelper().returnToHomePage();
     
     // save new state
-    List<ContactData> newList =  app.getContactHelper().getContacts();
+    List<ContactData> newList = app.getContactHelper().getContacts();
     
     // compare states  
-    assertEquals(newList.size(), oldList.size() + 1);
+    //assertEquals(newList.size(), oldList.size() + 1);
     
     oldList.add(contact);
     Collections.sort(oldList);
+    Collections.sort(newList);
     assertEquals(newList, oldList);
-  }
-  
-  //@Test
-  public void testEmptyContactCreation() throws Exception {
-	app.getNavigationHelper().openMainPage();
-    app.getContactHelper().initContactCreation();
-    app.getContactHelper().fillContactForm(new ContactData("", "", "", "", "", "", "", "", "-", "-", "", "", ""));
-    //áûëî: app, this, ÏÅÐÅÄ new ContactData
-    app.getContactHelper().submitContactCreation();
-    app.getContactHelper().returnToHomePage();
   }
 }

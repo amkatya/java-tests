@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Nov 29 18:38:27 MSK 2016</td>
+<td>Started on:</td><td>Mon Dec 12 20:21:46 MSK 2016</td>
 </tr>
-<tr><td>Total time:</td><td>584 seconds (584326 ms)</td>
+<tr><td>Total time:</td><td>6 seconds (6818 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,14 +75,14 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.example.tests.ContactCreationTests.testNonEmptyContactCreation()'><b>testNonEmptyContactCreation</b><br>Test class: com.example.tests.ContactCreationTests</td>
-<td><div><pre>java.lang.AssertionError: Lists differ at element [0]: ContactData [firstname=firstname] != ContactData [firstname=new firstname 1 ] expected [ContactData [firstname=firstname]] but found [ContactData [firstname=new firstname 1 ]]
+<td title='com.example.tests.ContactRemovalTests.deleteSomeContact()'><b>deleteSomeContact</b><br>Test class: com.example.tests.ContactRemovalTests</td>
+<td><div><pre>java.lang.AssertionError: Lists differ at element [1]: ContactData [firstname= contact207824074] != ContactData [firstname=contact-1924864182 contact1456409728] expected [ContactData [firstname= contact207824074]] but found [ContactData [firstname=contact-1924864182 contact1456409728]]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
 	at org.testng.Assert.assertEquals(Assert.java:551)
 	at org.testng.Assert.assertEquals(Assert.java:516)
-	at com.example.tests.ContactCreationTests.testNonEmptyContactCreation(ContactCreationTests.java:51)
+	at com.example.tests.ContactRemovalTests.deleteSomeContact(ContactRemovalTests.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -107,14 +107,14 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1937693946", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1937693946'><pre>java.lang.AssertionError: Lists differ at element [0]: ContactData [firstname=firstname] != ContactData [firstname=new firstname 1 ] expected [ContactData [firstname=firstname]] but found [ContactData [firstname=new firstname 1 ]]
+</pre></div><a href='#' onClick='toggleBox("stack-trace1486726131", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1486726131'><pre>java.lang.AssertionError: Lists differ at element [1]: ContactData [firstname= contact207824074] != ContactData [firstname=contact-1924864182 contact1456409728] expected [ContactData [firstname= contact207824074]] but found [ContactData [firstname=contact-1924864182 contact1456409728]]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
 	at org.testng.Assert.assertEquals(Assert.java:551)
 	at org.testng.Assert.assertEquals(Assert.java:516)
-	at com.example.tests.ContactCreationTests.testNonEmptyContactCreation(ContactCreationTests.java:51)
+	at com.example.tests.ContactRemovalTests.deleteSomeContact(ContactRemovalTests.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -140,8 +140,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 </pre></div></td>
-<td>579</td>
-<td>com.example.tests.ContactCreationTests@3aefe5e5</td></tr>
+<td>2</td>
+<td>com.example.tests.ContactRemovalTests@7c0e2abd</td></tr>
 </table><p>
 </body>
 </html>
