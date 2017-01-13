@@ -31,6 +31,7 @@ public class ContactRemovalTests extends TestBase {
 	    // compare states  
 		oldList.remove(0);
 	    Collections.sort(oldList);
+	    Collections.sort(newList);
 	    assertEquals(newList, oldList);
 	}
 }
