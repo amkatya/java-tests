@@ -35,10 +35,25 @@ public class ContactData implements Comparable<ContactData> {
 		this.secondaryaddress = secondaryaddress;
 		this.secondaryphone = secondaryphone;
 	}
+	
+	//@Override
+	//public String toString() {
+		//return "ContactData [firstname=" + firstname + "]";
+	//}
+	
 	@Override
 	public String toString() {
-		return "ContactData [firstname=" + firstname + "]";
+		return "ContactData [firstname=" + firstname + ", lastname=" + lastname
+				+ ", address=" + address + ", homephone=" + homephone
+				+ ", mobilephone=" + mobilephone + ", workphone=" + workphone
+				+ ", email1=" + email1 + ", emaill2=" + emaill2 + ", bday="
+				+ bday + ", bmonth=" + bmonth + ", byear=" + byear
+				+ ", secondaryaddress=" + secondaryaddress
+				+ ", secondaryphone=" + secondaryphone + "]";
 	}
+	
+	
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -47,6 +62,7 @@ public class ContactData implements Comparable<ContactData> {
 				//+ ((firstname == null) ? 0 : firstname.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

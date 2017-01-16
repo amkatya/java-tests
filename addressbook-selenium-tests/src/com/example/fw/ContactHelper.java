@@ -50,7 +50,8 @@ public class ContactHelper extends HelperBase {
 	
 		
 	public void editContactById(int id) {
-		click(By.xpath("//img[@alt='Edit'][" + (id+1) + "]"));
+		//add ()
+		click(By.xpath("(//img[@alt='Edit'])[" + (id+1) + "]"));
 	}
 
 	public void deleteContact(int id) {
