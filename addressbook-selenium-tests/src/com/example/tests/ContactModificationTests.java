@@ -30,13 +30,13 @@ public class ContactModificationTests extends TestBase {
 	    List<ContactData> newList = app.getContactHelper().getContacts();
 	    
 	    // compare states
-	    assertEquals(newList.size(), oldList.size());
+	    //assertEquals(newList.size(), oldList.size());
 	    
 	    oldList.remove(id);
 	    oldList.add(contact);
 	    Collections.sort(oldList);
 	    Collections.sort(newList);
-	    //assertEquals(newList, oldList);
+	    assertEquals(newList, oldList);
 	}
 
 }

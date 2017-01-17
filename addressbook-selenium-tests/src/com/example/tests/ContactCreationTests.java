@@ -3,13 +3,9 @@ package com.example.tests;
 
 import static org.testng.Assert.assertEquals;
 
-import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Random;
 
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class ContactCreationTests extends TestBase {
@@ -34,11 +30,11 @@ public class ContactCreationTests extends TestBase {
     List<ContactData> newList = app.getContactHelper().getContacts();
     
     // compare states  
-    assertEquals(newList.size(), oldList.size() + 1);
+    //assertEquals(newList.size(), oldList.size() + 1);
     
     oldList.add(contact);
     Collections.sort(oldList);
     Collections.sort(newList);
-    //assertEquals(newList, oldList);
+    assertEquals(newList, oldList);
   }
 }
