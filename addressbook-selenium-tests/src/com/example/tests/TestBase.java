@@ -28,7 +28,7 @@ public class TestBase {
 		@DataProvider
 	public Iterator<Object[]> randomValidGroupGenerator() {
 		List<Object[]> list = new ArrayList<Object[]>();
-		for (int i =0; i < 5; i++){
+		for (int i =0; i < 3; i++){
 			GroupData group = new GroupData();
 			group.name = generateRandomString();
 			group.header = generateRandomString();
