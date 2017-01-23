@@ -3,8 +3,6 @@ package com.example.fw;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.sourceforge.htmlunit.corejs.javascript.regexp.SubString;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
