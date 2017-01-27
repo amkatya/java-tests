@@ -14,6 +14,7 @@ import com.example.fw.ApplicationManager;
 public class TestBase {
 	
 	protected static ApplicationManager app;
+	private String name;
 
 		@BeforeTest
 	public void setUp() throws Exception {
@@ -28,8 +29,11 @@ public class TestBase {
 		@DataProvider
 	public Iterator<Object[]> randomValidGroupGenerator() {
 		List<Object[]> list = new ArrayList<Object[]>();
-		for (int i =0; i < 3; i++){
+		for (int i =0; i < 5; i++){
 			GroupData group = new GroupData();
+				.withName(generateRandomString())
+				.withHeader(generateRandomString())
+				.withFooter(generateRandomString());
 			group.name = generateRandomString();
 			group.header = generateRandomString();
 			group.footer = generateRandomString();
@@ -38,6 +42,11 @@ public class TestBase {
 			return list.iterator();
 		}
 		
+	private GroupData withName(String name) {
+			this.name = name;
+			return this;
+		}
+
 	public String generateRandomString() {
 		Random rnd = new Random();
 		if(rnd.nextInt(3) == 0){
