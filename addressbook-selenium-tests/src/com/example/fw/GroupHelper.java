@@ -18,6 +18,7 @@ public class GroupHelper extends HelperBase {
 	//	click(By.name("new"));
 	//}
 	public GroupHelper initGroupCreation() {
+		manager.navigateTo().groupsPage();
 		click(By.name("new"));
 		return this;
 	}
@@ -77,12 +78,13 @@ public class GroupHelper extends HelperBase {
 		return this;
 	}
 	
-	public void returntoGroupPage() {
+	public void returnToGroupsPage() {
 	    click(By.linkText("group page"));
 	}
 
 	public List<GroupData> getGroups() {
 		List<GroupData> groups = new ArrayList<GroupData>();
+		//manager.navigateTo().groupsPage();
 		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
 		for (WebElement checkbox : checkboxes) {
 			GroupData group = new GroupData();

@@ -15,7 +15,7 @@ public class ContactCreationTests extends TestBase {
   public void testContactCreationWithValidData(ContactData contact) throws Exception {
 	
 	  
-	app.getNavigationHelper().openMainPage();
+	app.navigateTo().mainPage();
 	
 	// save old state
     List<ContactData> oldList = app.getContactHelper().getContacts();

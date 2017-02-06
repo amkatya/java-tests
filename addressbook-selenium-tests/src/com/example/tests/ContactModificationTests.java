@@ -14,7 +14,7 @@ public class ContactModificationTests extends TestBase {
 	
 	public void modifySomeContact(ContactData contact) {
 		
-		app.getNavigationHelper().openMainPage();
+		app.navigateTo().mainPage();
 		
 		// save old state
 	    List<ContactData> oldList = app.getContactHelper().getContacts();
