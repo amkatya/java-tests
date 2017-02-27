@@ -14,42 +14,23 @@ public class GroupHelper extends HelperBase {
 		super(manager);
 	}
 
-	//public void initGroupCreation() {
-	//	click(By.name("new"));
-	//}
 	public GroupHelper initGroupCreation() {
 		manager.navigateTo().groupsPage();
 		click(By.name("new"));
 		return this;
 	}
 
-	//public void fillGroupForm(GroupData group) {
-	//    type(By.name("group_name"), group.getName());
-	//    type(By.name("group_header"), group.getHeader());
-	//    type(By.name("group_footer"), group.getFooter());
-	//}
-	
-	public GroupHelper fillGroupForm(GroupData group) {
+	public void fillGroupForm(GroupData group) {
 	    type(By.name("group_name"), group.getName());
 	    type(By.name("group_header"), group.getHeader());
 	    type(By.name("group_footer"), group.getFooter());
-		return this;
-		
 	}
-
-	//public void submitGroupCreation() {
-	//	click(By.name("submit"));
-	//}
+	
 	public GroupHelper submitGroupCreation() {
 		click(By.name("submit"));
 		return this;
-		
-	}
+		}
 
-	//public void deleteGroup(int index) {
-	//	selectGroupByIndex(index);
-	//	click(By.name("delete"));
-	//}
 	public GroupHelper deleteGroup(int index) {
 		selectGroupByIndex(index);
 		click(By.name("delete"));
@@ -61,19 +42,12 @@ public class GroupHelper extends HelperBase {
 		click(By.xpath("//input[@name='selected[]'][" + (index+1) + "]"));
 	}
 
-	//public void initGroupModification(int index) {
-	//	selectGroupByIndex(index);
-	//	click(By.name("edit"));
-	//}
 	public GroupHelper initGroupModification(int index) {
 		selectGroupByIndex(index);
 		click(By.name("edit"));
 		return this;
 	}
 
-	//public void submitGroupModification() {
-	//	click(By.name("update"));		
-	//}
 	public GroupHelper submitGroupModification() {
 		click(By.name("update"));
 		return this;
@@ -83,30 +57,29 @@ public class GroupHelper extends HelperBase {
 	    click(By.linkText("group page"));
 	}
 
+	
 	public List<GroupData> getGroups() {
 		List<GroupData> groups = new ArrayList<GroupData>();
-		//manager.navigateTo().groupsPage();
 		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
 		for (WebElement checkbox : checkboxes) {
-			GroupData group = new GroupData();
 			String title = checkbox.getAttribute("title");
-			group.name = title.substring("Select (".length(), title.length() - ")".length());
-			groups.add(group);
+			String name = title.substring("Select (".length(), title.length() - ")".length());
+			groups.add(new GroupData().withName(name)); 
 		}
 		return groups;
 	}
-	//lesson4:
-	//public List<GroupData> getGroups() {
-	//	List<GroupData> groups = new ArrayList<GroupData>();
-	//	List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
-	//	for (WebElement checkbox : checkboxes) {
-	//		String title = checkbox.getAttribute("title");
-	//		String name = title.substring("Select (".length(), title.length() - ")".length());
-	//		GroupData group = new GroupData().withName(name);
-	//		groups.add(group); CLICK ON "group" > CTRL+1 > Inline local variable
-	//	}
-	//	return groups;
-	//}
 	
-
+	// before lesson4:                                                                        
+	//public List<GroupData> getGroups() {                                                    
+//		List<GroupData> groups = new ArrayList<GroupData>();                                  
+//		//manager.navigateTo().groupsPage();                                                  
+//		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));             
+//		for (WebElement checkbox : checkboxes) {                                              
+//			GroupData group = new GroupData();                                                
+//			String title = checkbox.getAttribute("title");                                    
+//			group.name = title.substring("Select (".length(), title.length() - ")".length()); 
+//			groups.add(group);                                                                
+//		}                                                                                     
+//		return groups;                                                                        
+	//}                                                                                       
 }

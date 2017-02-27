@@ -3,17 +3,15 @@ package com.example.tests;
 public class GroupData implements Comparable<GroupData> {
 	
 	
-	public String name;
-	public String header;
-	public String footer;
-	//lesson4:
-	//private String name;
-	//private String header;
-	//private String footer;
+	
+	private String name;
+	private String header;
+	private String footer;
 	
 
 	public GroupData() {
 	}
+	
 	public GroupData(String groupname, String header, String footer) {
 		this.name = groupname;
 		this.header = header;

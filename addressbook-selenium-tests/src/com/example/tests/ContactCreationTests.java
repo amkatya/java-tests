@@ -33,7 +33,7 @@ public class ContactCreationTests extends TestBase {
     //assertEquals(newList.size(), oldList.size() + 1);
     
     oldList.add(contact);
-    Collections.sort(oldList);
+    //Collections.sort(oldList);
     Collections.sort(newList);
     assertEquals(newList, oldList);
   }

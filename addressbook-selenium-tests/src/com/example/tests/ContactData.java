@@ -36,21 +36,21 @@ public class ContactData implements Comparable<ContactData> {
 		this.secondaryphone = secondaryphone;
 	}
 	
-	//@Override
-	//public String toString() {
-		//return "ContactData [firstname=" + firstname + "]";
-	//}
-	
 	@Override
 	public String toString() {
-		return "ContactData [firstname=" + firstname + ", lastname=" + lastname
-				+ ", address=" + address + ", homephone=" + homephone
-				+ ", mobilephone=" + mobilephone + ", workphone=" + workphone
-				+ ", email1=" + email1 + ", emaill2=" + emaill2 + ", bday="
-				+ bday + ", bmonth=" + bmonth + ", byear=" + byear
-				+ ", secondaryaddress=" + secondaryaddress
-				+ ", secondaryphone=" + secondaryphone + "]";
+		return "ContactData [lastname=" + lastname + "]";
 	}
+	
+	//Override
+	//ublic String toString() {
+	//return "ContactData [firstname=" + firstname + ", lastname=" + lastname
+	//		+ ", address=" + address + ", homephone=" + homephone
+	//		+ ", mobilephone=" + mobilephone + ", workphone=" + workphone
+	//		+ ", email1=" + email1 + ", emaill2=" + emaill2 + ", bday="
+	//		+ bday + ", bmonth=" + bmonth + ", byear=" + byear
+	//		+ ", secondaryaddress=" + secondaryaddress
+	//		+ ", secondaryphone=" + secondaryphone + "]";
+	//
 	
 	
 	
@@ -72,17 +72,17 @@ public class ContactData implements Comparable<ContactData> {
 		if (getClass() != obj.getClass())
 			return false;
 		ContactData other = (ContactData) obj;
-		if (firstname == null) {
-			if (other.firstname != null)
+		if (lastname == null) {
+			if (other.lastname != null)
 				return false;
-		} else if (!firstname.equals(other.firstname))
+		} else if (!lastname.equals(other.lastname))
 			return false;
 		return true;
 	}
 	
 	//@Override
 	public int compareTo(ContactData other) {
-		return this.firstname.toLowerCase().compareTo(other.firstname.toLowerCase());
+		return this.lastname.toLowerCase().compareTo(other.lastname.toLowerCase());
 	}
 	
 	

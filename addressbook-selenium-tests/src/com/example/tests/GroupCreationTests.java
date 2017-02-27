@@ -7,6 +7,8 @@ import java.util.List;
 
 import org.testng.annotations.Test;
 
+import com.example.fw.GroupHelper;
+
 public class GroupCreationTests extends TestBase {
 	
 	
@@ -19,15 +21,17 @@ public class GroupCreationTests extends TestBase {
     app.navigateTo().groupsPage();
     
     // save old state
-    List<GroupData> oldList = app.getGroupHelper().getGroups();
+    GroupHelper groupHelper = app.getGroupHelper();
+	List<GroupData> oldList = groupHelper.getGroups();
     
     //// actions    
-    //app.getGroupHelper().initGroupCreation();
-	//app.getGroupHelper().fillGroupForm(group);
-    //app.getGroupHelper().submitGroupCreation();
-    //app.getGroupHelper().returntoGroupPage();
-    
-    // actions //lesson4 ~15min
+    //groupHelper.initGroupCreation();
+	//groupHelper.fillGroupForm(group);
+    //groupHelper.submitGroupCreation();
+    //groupHelper.returnToGroupsPage();
+    //
+	
+    // actions //lesson4 ~13min
     app.getGroupHelper()
     .initGroupCreation()
 	.fillGroupForm(group)
@@ -35,7 +39,7 @@ public class GroupCreationTests extends TestBase {
     .returnToGroupsPage();
     
     // save new state
-    List<GroupData> newList = app.getGroupHelper().getGroups();
+    List<GroupData> newList = groupHelper.getGroups();
     
     // compare states  
     oldList.add(group);
