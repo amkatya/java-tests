@@ -55,6 +55,7 @@ public class GroupData implements Comparable<GroupData> {
 	}
 	
 	
+	//lesson 4, ~5min:
 	public GroupData withName(String name) {
 		this.name = name;
 		return this;

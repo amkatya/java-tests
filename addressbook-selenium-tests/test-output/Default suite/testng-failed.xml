@@ -7,7 +7,7 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="testGroupCreationWithValidData"/>
+          <include name="testGroupCreationWithValidData" invocation-numbers="0 1 2 3 4"/>
         </methods>
       </class> <!-- com.example.tests.GroupCreationTests -->
     </classes>

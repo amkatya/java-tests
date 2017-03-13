@@ -19,6 +19,7 @@ public class ContactHelper extends HelperBase {
 	    click(By.linkText("add new"));
 	}
 
+	//lesson 4, ~18min
 	public void fillContactForm(ContactData contact) {
 		type(By.name("firstname"),contact.firstname);
 	    type(By.name("lastname"),contact.lastname);

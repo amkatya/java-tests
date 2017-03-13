@@ -20,7 +20,7 @@ public class ContactCreationTests extends TestBase {
 	// save old state
     List<ContactData> oldList = app.getContactHelper().getContacts();
     
-    // actions 
+    // actions //lesson 4, ~18min
 	app.getContactHelper().initContactCreation();	
 	app.getContactHelper().fillContactForm(contact);
     app.getContactHelper().submitContactCreation();
