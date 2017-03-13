@@ -17,7 +17,7 @@ public class ContactRemovalTests extends TestBase {
 		app.navigateTo().mainPage();
 		
 		// save old state
-	    List<ContactData> oldList =  app.getContactHelper().getContacts();
+		List<ContactData> oldList =  app.getContactHelper().getContacts();
 	    
 	    Random rnd = new Random();
 	    int id = rnd.nextInt(oldList.size()-1);
@@ -27,7 +27,7 @@ public class ContactRemovalTests extends TestBase {
 		app.getContactHelper().returnToHomePage();
 		
 		 // save new state
-	    List<ContactData> newList =  app.getContactHelper().getContacts();
+		List<ContactData> newList =  app.getContactHelper().getContacts();
 	    
 	    
 	    // compare states  

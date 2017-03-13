@@ -2,71 +2,71 @@
 <testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30427" started-at="2017-03-13T10:39:10Z" finished-at="2017-03-13T10:39:40Z">
+  <suite name="Default suite" duration-ms="24560" started-at="2017-03-13T17:59:50Z" finished-at="2017-03-13T18:00:15Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="30427" started-at="2017-03-13T10:39:10Z" finished-at="2017-03-13T10:39:40Z">
+    <test name="Default test" duration-ms="24560" started-at="2017-03-13T17:59:50Z" finished-at="2017-03-13T18:00:15Z">
       <class name="com.example.tests.GroupCreationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.GroupCreationTests@7c0e2abd]" name="setUp" is-config="true" duration-ms="3937" started-at="2017-03-13T13:39:10Z" finished-at="2017-03-13T13:39:14Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.GroupCreationTests@49bed2]" name="setUp" is-config="true" duration-ms="3989" started-at="2017-03-13T20:59:50Z" finished-at="2017-03-13T20:59:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@7c0e2abd]" name="testGroupCreationWithValidData" duration-ms="5182" started-at="2017-03-13T13:39:14Z" data-provider="randomValidGroupGenerator" finished-at="2017-03-13T13:39:19Z">
+        <test-method status="PASS" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@49bed2]" name="testGroupCreationWithValidData" duration-ms="5992" started-at="2017-03-13T20:59:54Z" data-provider="randomValidGroupGenerator" finished-at="2017-03-13T21:00:00Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [name=test-688298396, header=test-1506143409, footer=]]]>
+                <![CDATA[GroupData [name=test-294607396, header=, footer=test2040977041]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGroupCreationWithValidData -->
-        <test-method status="PASS" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@7c0e2abd]" name="testGroupCreationWithValidData" duration-ms="5145" started-at="2017-03-13T13:39:19Z" data-provider="randomValidGroupGenerator" finished-at="2017-03-13T13:39:24Z">
+        <test-method status="PASS" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@49bed2]" name="testGroupCreationWithValidData" duration-ms="3421" started-at="2017-03-13T21:00:00Z" data-provider="randomValidGroupGenerator" finished-at="2017-03-13T21:00:04Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [name=test964356097, header=test1694933497, footer=test-959351926]]]>
+                <![CDATA[GroupData [name=test47164601, header=test117228150, footer=test-1109014603]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGroupCreationWithValidData -->
-        <test-method status="PASS" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@7c0e2abd]" name="testGroupCreationWithValidData" duration-ms="5226" started-at="2017-03-13T13:39:24Z" data-provider="randomValidGroupGenerator" finished-at="2017-03-13T13:39:30Z">
+        <test-method status="PASS" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@49bed2]" name="testGroupCreationWithValidData" duration-ms="3570" started-at="2017-03-13T21:00:04Z" data-provider="randomValidGroupGenerator" finished-at="2017-03-13T21:00:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [name=test-1638962117, header=, footer=test-1561213470]]]>
+                <![CDATA[GroupData [name=, header=test733494479, footer=]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGroupCreationWithValidData -->
-        <test-method status="PASS" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@7c0e2abd]" name="testGroupCreationWithValidData" duration-ms="5246" started-at="2017-03-13T13:39:30Z" data-provider="randomValidGroupGenerator" finished-at="2017-03-13T13:39:35Z">
+        <test-method status="PASS" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@49bed2]" name="testGroupCreationWithValidData" duration-ms="3761" started-at="2017-03-13T21:00:07Z" data-provider="randomValidGroupGenerator" finished-at="2017-03-13T21:00:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [name=, header=, footer=test-1081942226]]]>
+                <![CDATA[GroupData [name=test43868371, header=test-1007471171, footer=]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGroupCreationWithValidData -->
-        <test-method status="PASS" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@7c0e2abd]" name="testGroupCreationWithValidData" duration-ms="5256" started-at="2017-03-13T13:39:35Z" data-provider="randomValidGroupGenerator" finished-at="2017-03-13T13:39:40Z">
+        <test-method status="PASS" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@49bed2]" name="testGroupCreationWithValidData" duration-ms="3391" started-at="2017-03-13T21:00:11Z" data-provider="randomValidGroupGenerator" finished-at="2017-03-13T21:00:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [name=test1797382347, header=test804921755, footer=test634482739]]]>
+                <![CDATA[GroupData [name=test954061911, header=test-2062961294, footer=]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGroupCreationWithValidData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.GroupCreationTests@7c0e2abd]" name="tearDown" is-config="true" duration-ms="413" started-at="2017-03-13T13:39:40Z" finished-at="2017-03-13T13:39:40Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.GroupCreationTests@49bed2]" name="tearDown" is-config="true" duration-ms="418" started-at="2017-03-13T21:00:15Z" finished-at="2017-03-13T21:00:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

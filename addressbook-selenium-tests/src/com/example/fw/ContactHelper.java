@@ -62,30 +62,30 @@ public class ContactHelper extends HelperBase {
 		}
 
 	
-	//public List<ContactData> getContacts() {
-	//	List<ContactData> contacts = new ArrayList<ContactData>();
-	//	List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
-	//	for (WebElement checkbox : checkboxes) {
-	//		ContactData contact = new ContactData();
-	//		String title = checkbox.getAttribute("title");
-	//		contact.firstname = title.substring("Select (".length(), title.length() - ")".length());
-	//		contacts.add(contact);
-	//	}
-	//	return contacts;
-	//}
-	
-	public SortedListOf<ContactData> getUiContacts() {
-		SortedListOf<ContactData> contacts = new SortedListOf<ContactData>();
-		
-		manager.navigateTo().mainPage();
-		List<WebElement> rows = getContactRows();
-		for (WebElement row : rows) {
-			 String lastname = row.findElement(By.xpath(".//td[2]")).getText();
-			 String firstname = row.findElement(By.xpath(".//td[3]")).getText();
-			 contacts.add(new ContactData().withLastName(lastname).withFirstName(firstname));     
+	public List<ContactData> getContacts() {
+		List<ContactData> contacts = new ArrayList<ContactData>();
+		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
+		for (WebElement checkbox : checkboxes) {
+			ContactData contact = new ContactData();
+			String title = checkbox.getAttribute("title");
+			contact.firstname = title.substring("Select (".length(), title.length() - ")".length());
+			contacts.add(contact);
 		}
 		return contacts;
 	}
+	
+	//public SortedListOf<ContactData> getUiContacts() {
+	//	SortedListOf<ContactData> contacts = new SortedListOf<ContactData>();
+	//	
+	//	manager.navigateTo().mainPage();
+	//	List<WebElement> rows = getContactRows();
+	//	for (WebElement row : rows) {
+	//		 String lastname = row.findElement(By.xpath(".//td[2]")).getText();
+	//		 String firstname = row.findElement(By.xpath(".//td[3]")).getText();
+	//		 contacts.add(new ContactData().withLastName(lastname).withFirstName(firstname));     
+	//	}
+	//	return contacts;
+	//}
 	
 	//https://addons.mozilla.org/en-us/firefox/addon/element-locator-for-webdriv/
 	//http://learn-automation.com/how-to-write-dynamic-xpath-in-selenium/
