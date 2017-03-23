@@ -1,14 +1,10 @@
 package com.example.tests;
 
+import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
-import static org.hamcrest.Matchers.*;
-
-import java.util.Collections;
-import java.util.List;
 
 import org.testng.annotations.Test;
 
-import com.example.fw.GroupHelper;
 import com.example.utils.SortedListOf;
 
 public class GroupCreationTests extends TestBase {
