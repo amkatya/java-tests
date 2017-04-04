@@ -7,6 +7,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import com.example.tests.ContactData;
+import com.example.tests.GroupData;
+import com.example.utils.SortedListOf;
 
 
 public class ContactHelper extends HelperBase {
@@ -15,6 +17,37 @@ public class ContactHelper extends HelperBase {
 		super(manager);
 	}
 
+	
+	
+	//----------------------------
+	private SortedListOf<ContactData> cachedContacts;
+	
+	
+	public SortedListOf<ContactData> getContacts() {
+		if (cachedContacts == null){
+			rebuildCache();
+		}
+		return cachedContacts;
+	}
+	
+	private void rebuildCache() {
+		cachedContacts = new SortedListOf<ContactData>();
+		
+		manager.navigateTo().contactsPage();
+		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
+		for (WebElement checkbox : checkboxes) {
+			String title = checkbox.getAttribute("title");
+			String name = title.substring("Select (".length(), title.length() - ")".length());
+			cachedContacts.add(new ContactData().withName(name)); 
+		}
+	}
+	
+	//----------------------------
+	
+	
+	
+	
+	
 	public void initContactCreation() {
 	    click(By.linkText("add new"));
 	}
@@ -73,6 +106,8 @@ public class ContactHelper extends HelperBase {
 		}
 		return contacts;
 	}
+	
+	
 	
 	//public SortedListOf<ContactData> getUiContacts() {
 	//	SortedListOf<ContactData> contacts = new SortedListOf<ContactData>();
