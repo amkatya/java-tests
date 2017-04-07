@@ -10,63 +10,44 @@ import com.example.tests.ContactData;
 import com.example.tests.GroupData;
 import com.example.utils.SortedListOf;
 
-
 public class ContactHelper extends HelperBase {
 
+	
+	public static boolean CREATION = true;
+	public static boolean MODIFICATION = false;
+	
+	
 	public ContactHelper(ApplicationManager manager) {
 		super(manager);
 	}
-
-	
-	
-	//----------------------------
-	private SortedListOf<ContactData> cachedContacts;
-	
-	
-	public SortedListOf<ContactData> getContacts() {
-		if (cachedContacts == null){
-			rebuildCache();
-		}
-		return cachedContacts;
-	}
-	
-	private void rebuildCache() {
-		cachedContacts = new SortedListOf<ContactData>();
-		
-		manager.navigateTo().contactsPage();
-		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
-		for (WebElement checkbox : checkboxes) {
-			String title = checkbox.getAttribute("title");
-			String name = title.substring("Select (".length(), title.length() - ")".length());
-			cachedContacts.add(new ContactData().withName(name)); 
-		}
-	}
-	
-	//----------------------------
-	
-	
-	
-	
 	
 	public void initContactCreation() {
 	    click(By.linkText("add new"));
 	}
 
 	//lesson 4, ~18min
-	public void fillContactForm(ContactData contact) {
-		type(By.name("firstname"),contact.firstname);
-	    type(By.name("lastname"),contact.lastname);
-	    type(By.name("address"),contact.address);
-	    type(By.name("home"),contact.homephone);
-	    type(By.name("mobile"),contact.mobilephone);
-	    type(By.name("work"),contact.workphone);
-	    type(By.name("email"),contact.email1);
-	    type(By.name("email2"),contact.emaill2);
-	    selectByText(By.name("bday"), contact.bday);
-	    selectByText(By.name("bmonth"), contact.bmonth);
-	    type(By.name("byear"),contact.byear);
-	    type(By.name("address2"),contact.secondaryaddress);
-	    type(By.name("phone2"),contact.secondaryphone);
+	public void fillContactForm(ContactData contact, boolean formType) {
+		type(By.name("firstname"),contact.getFirstname());
+	    type(By.name("lastname"),contact.getLastname());
+	    type(By.name("address"),contact.getAddress());
+	    type(By.name("home"),contact.getHomephone());
+	    type(By.name("mobile"),contact.getMobilephone());
+	    type(By.name("work"),contact.getWorkphone());
+	    type(By.name("email"),contact.getEmail1());
+	    type(By.name("email2"),contact.getEmaill2());
+	    selectByText(By.name("bday"), contact.getBday());
+	    selectByText(By.name("bmonth"), contact.getBmonth());
+	    type(By.name("byear"),contact.getByear());
+	    if (formType == CREATION){
+	    	//selectByText(By.name("new_group")), "group 1");
+	    } else {
+	    	if (driver.findElements(By.name("new_group")).size() !=0) {
+	    		throw new Error("Group selector exists in contact modification form");
+	    	}
+	    }
+	    type(By.name("address2"),contact.getSecondaryaddress());
+	    type(By.name("phone2"),contact.getSecondaryphone());
+	    //return this;
 	}
 
 	
@@ -93,36 +74,42 @@ public class ContactHelper extends HelperBase {
 		editContactById(id);
 		click(By.xpath("(//input[@name='update'])[2]"));
 		}
-
 	
-	public List<ContactData> getContacts() {
-		List<ContactData> contacts = new ArrayList<ContactData>();
-		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
-		for (WebElement checkbox : checkboxes) {
-			ContactData contact = new ContactData();
-			String title = checkbox.getAttribute("title");
-			contact.firstname = title.substring("Select (".length(), title.length() - ")".length());
-			contacts.add(contact);
+	//----------------------------
+	private SortedListOf<ContactData> cachedContacts;
+	
+	
+	public SortedListOf<ContactData> getContacts() {
+		if (cachedContacts == null){
+			rebuildCache();
 		}
-		return contacts;
+		return cachedContacts;
 	}
 	
+	private void rebuildCache() {
+		cachedContacts = new SortedListOf<ContactData>();
+		
+		manager.navigateTo().mainPage();
+		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
+		for (WebElement checkbox : checkboxes) {
+			String title = checkbox.getAttribute("title");
+			String firstname = title.substring("Select (".length(), title.length() - ")".length());
+			cachedContacts.add(new ContactData().withFirstname(firstname)); 
+		}
+	}
 	
+	//----------------------------
 	
-	//public SortedListOf<ContactData> getUiContacts() {
-	//	SortedListOf<ContactData> contacts = new SortedListOf<ContactData>();
-	//	
-	//	manager.navigateTo().mainPage();
-	//	List<WebElement> rows = getContactRows();
-	//	for (WebElement row : rows) {
-	//		 String lastname = row.findElement(By.xpath(".//td[2]")).getText();
-	//		 String firstname = row.findElement(By.xpath(".//td[3]")).getText();
-	//		 contacts.add(new ContactData().withLastName(lastname).withFirstName(firstname));     
+	//public List<ContactData> getContacts() {
+	//	List<ContactData> contacts = new ArrayList<ContactData>();
+	//	List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
+	//	for (WebElement checkbox : checkboxes) {
+	//		ContactData contact = new ContactData();
+	//		String title = checkbox.getAttribute("title");
+	//		contact.firstname = title.substring("Select (".length(), title.length() - ")".length());
+	//		contacts.add(contact);
 	//	}
 	//	return contacts;
 	//}
-	
-	//https://addons.mozilla.org/en-us/firefox/addon/element-locator-for-webdriv/
-	//http://learn-automation.com/how-to-write-dynamic-xpath-in-selenium/
 	
 }

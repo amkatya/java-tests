@@ -37,8 +37,7 @@ public class TestBase {
 			list.add(new Object[]{group});
 			}
 			return list.iterator();
-		}
-		
+		}		
 
 
 	public String generateRandomString() {
@@ -50,30 +49,53 @@ public class TestBase {
 			}	
 		}
 
-
-
 	@DataProvider
-	public Iterator<Object[]> randomValidContactGenerator() {
+	public Iterator<Object[]> randomValidContactGenerator(String May) {
 		List<Object[]> list = new ArrayList<Object[]>();
 		for (int i = 0; i < 5; i++){
-			ContactData contact = new ContactData();
-			contact.firstname = generatorRandomString();	
-			contact.lastname = generatorRandomString();
-			contact.address = generatorRandomString();
-			contact.homephone = generatorRandomString();
-			contact.mobilephone = generatorRandomString();
-			contact.workphone = generatorRandomString();
-			contact.email1 = "";
-			contact.emaill2 = "";
-			contact.bday = "5";
-			contact.bmonth = "May";
-			contact.byear = "1985";
-			contact.secondaryaddress = generatorRandomString();
-			contact.secondaryphone = generatorRandomString();
+			ContactData contact = new ContactData()
+			.withFirstname(generatorRandomString())
+			.withLastname(generatorRandomString())
+			.withAddress(generatorRandomString())
+			.withHomephone(generatorRandomString())
+			.withMobilephone(generatorRandomString())
+			.withWorkphone(generatorRandomString())
+			.withEmail1(generatorRandomString())
+			.withEmail2(generatorRandomString())
+			.withBday(5)
+			.withBmonth(May)
+			.withByear(1985)
+			.withSecondaryaddress(generatorRandomString())
+			.withSecondaryphone(generatorRandomString());
 			list.add(new Object[]{contact});
 		}
 		return list.iterator();
 	}
+	
+	//@DataProvider
+	//public Iterator<Object[]> randomValidContactGenerator() {
+	//	List<Object[]> list = new ArrayList<Object[]>();
+	//	for (int i = 0; i < 5; i++){
+	//		ContactData contact = new ContactData();
+	//		contact.firstname = generatorRandomString();	
+	//		contact.lastname = generatorRandomString();
+	//		contact.address = generatorRandomString();
+	//		contact.homephone = generatorRandomString();
+	//		contact.mobilephone = generatorRandomString();
+	//		contact.workphone = generatorRandomString();
+	//		contact.email1 = "";
+	//		contact.emaill2 = "";
+	//		contact.bday = "5";
+	//		contact.bmonth = "May";
+	//		contact.byear = "1985";
+	//		contact.secondaryaddress = generatorRandomString();
+	//		contact.secondaryphone = generatorRandomString();
+	//		list.add(new Object[]{contact});
+	//	}
+	//	return list.iterator();
+	//}
+
+
 
 	public String generatorRandomString() {
 		Random rnd = new Random();
@@ -83,4 +105,4 @@ public class TestBase {
 			return "contact" + rnd.nextInt();
 		}
 	}
-}
+	}
