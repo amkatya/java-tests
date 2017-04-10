@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Random;
 
 import org.testng.annotations.Test;
+import static com.example.fw.ContactHelper.MODIFICATION;
 
 public class ContactModificationTests extends TestBase {
 	
@@ -14,7 +15,6 @@ public class ContactModificationTests extends TestBase {
 	
 	public void modifySomeContact(ContactData contact) {
 		
-		app.navigateTo().mainPage();
 		
 		// save old state
 	    List<ContactData> oldList = app.getContactHelper().getContacts();
@@ -23,10 +23,8 @@ public class ContactModificationTests extends TestBase {
 	    int id = rnd.nextInt(oldList.size()-1);
 	    
 	    // actions 
-		app.getContactHelper().editContactById(id);
-		app.getContactHelper().fillContactForm(contact);
-		app.getContactHelper().submitContactModification();
-		app.getContactHelper().returnToHomePage();
+	    app.getContactHelper().modifyContact(id, contact);
+	
 		
 		// save new state
 	    List<ContactData> newList = app.getContactHelper().getContacts();

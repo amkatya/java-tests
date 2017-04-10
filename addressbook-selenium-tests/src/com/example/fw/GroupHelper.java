@@ -16,7 +16,6 @@ public class GroupHelper extends HelperBase {
 	
 	private SortedListOf<GroupData> cachedGroups;
 	
-	
 	public SortedListOf<GroupData> getGroups() {
 		if (cachedGroups == null){
 			rebuildCache();

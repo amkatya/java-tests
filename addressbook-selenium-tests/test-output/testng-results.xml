@@ -1,59 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4015" started-at="2017-04-07T15:00:13Z" finished-at="2017-04-07T15:00:17Z">
+  <suite name="Default suite" duration-ms="6173" started-at="2017-04-10T11:28:49Z" finished-at="2017-04-10T11:28:55Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4015" started-at="2017-04-07T15:00:13Z" finished-at="2017-04-07T15:00:17Z">
-      <class name="com.example.tests.ContactCreationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactCreationTests@11b8e71]" name="setUp" is-config="true" duration-ms="3557" started-at="2017-04-07T18:00:13Z" finished-at="2017-04-07T18:00:16Z">
+    <test name="Default test" duration-ms="6173" started-at="2017-04-10T11:28:49Z" finished-at="2017-04-10T11:28:55Z">
+      <class name="com.example.tests.GroupRemovalTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.GroupRemovalTests@1b61568]" name="setUp" is-config="true" duration-ms="3472" started-at="2017-04-10T14:28:49Z" finished-at="2017-04-10T14:28:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@11b8e71]" name="testContactCreationWithValidData" duration-ms="0" started-at="2017-04-07T18:00:16Z" data-provider="randomValidContactGenerator" finished-at="2017-04-07T18:00:16Z">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Some DataProvider public java.util.Iterator com.example.tests.TestBase.randomValidContactGenerator(java.lang.String) parameters unresolved:  at 1 type class java.lang.String
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Some DataProvider public java.util.Iterator com.example.tests.TestBase.randomValidContactGenerator(java.lang.String) parameters unresolved:  at 1 type class java.lang.String
-
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:129)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:430)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1270)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:985)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1075)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method status="PASS" signature="deleteSomeGroup()[pri:0, instance:com.example.tests.GroupRemovalTests@1b61568]" name="deleteSomeGroup" duration-ms="2280" started-at="2017-04-10T14:28:53Z" finished-at="2017-04-10T14:28:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testContactCreationWithValidData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactCreationTests@11b8e71]" name="tearDown" is-config="true" duration-ms="445" started-at="2017-04-07T18:00:16Z" finished-at="2017-04-07T18:00:17Z">
+        </test-method> <!-- deleteSomeGroup -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.GroupRemovalTests@1b61568]" name="tearDown" is-config="true" duration-ms="407" started-at="2017-04-10T14:28:55Z" finished-at="2017-04-10T14:28:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.example.tests.ContactCreationTests -->
+      </class> <!-- com.example.tests.GroupRemovalTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

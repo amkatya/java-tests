@@ -1,13 +1,14 @@
 package com.example.fw;
 
-import java.util.ArrayList;
+import static com.example.fw.ContactHelper.CREATION;
+import static com.example.fw.ContactHelper.MODIFICATION;
+
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import com.example.tests.ContactData;
-import com.example.tests.GroupData;
 import com.example.utils.SortedListOf;
 
 public class ContactHelper extends HelperBase {
@@ -21,12 +22,53 @@ public class ContactHelper extends HelperBase {
 		super(manager);
 	}
 	
-	public void initContactCreation() {
+	
+	private void rebuildCache() {
+		cachedContacts = new SortedListOf<ContactData>();
+		manager.navigateTo().mainPage();
+		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
+		for (WebElement checkbox : checkboxes) {
+			String title = checkbox.getAttribute("title");
+			String firstname = title.substring("Select (".length(), title.length() - ")".length());
+			cachedContacts.add(new ContactData().withFirstname(firstname)); 
+		}
+	}
+	
+	public ContactHelper createContact(ContactData contact) {
+		manager.navigateTo().mainPage();
+		initContactCreation();
+		fillContactForm(contact, CREATION);
+		submitContactCreation();
+		returnToHomePage();
+		return this;
+	}
+	
+	public ContactHelper modifyContact(int id, ContactData contact) {
+		manager.navigateTo().mainPage();
+		editContactById(id);
+		fillContactForm(contact, MODIFICATION);
+		submitContactModification();
+		returnToHomePage();
+		return this;
+	}
+	
+	public ContactHelper deleteContact(int id) {
+		manager.navigateTo().mainPage();
+		submitContactDeletion(id);
+		returnToHomePage();
+		return this;
+		}
+
+
+	//-------------------------------------------------------------------------------------
+	
+	public ContactHelper initContactCreation() {
 	    click(By.linkText("add new"));
+	    return this;
 	}
 
 	//lesson 4, ~18min
-	public void fillContactForm(ContactData contact, boolean formType) {
+	public ContactHelper fillContactForm(ContactData contact, boolean formType) {
 		type(By.name("firstname"),contact.getFirstname());
 	    type(By.name("lastname"),contact.getLastname());
 	    type(By.name("address"),contact.getAddress());
@@ -47,35 +89,37 @@ public class ContactHelper extends HelperBase {
 	    }
 	    type(By.name("address2"),contact.getSecondaryaddress());
 	    type(By.name("phone2"),contact.getSecondaryphone());
-	    //return this;
+	    return this;
 	}
 
-	
-
-	public void submitContactCreation() {
+	public ContactHelper submitContactCreation() {
 		driver.findElement(By.name("submit")).click();
+		return this;
 	}
 
-	public void returnToHomePage() {
+	public ContactHelper returnToHomePage() {
 		driver.findElement(By.linkText("home page")).click();
+		return this;
 	}
 	
-	public void submitContactModification() {
-		click(By.xpath("(//input[@name='update'])[1]"));		
+	public ContactHelper submitContactModification() {
+		click(By.xpath("(//input[@name='update'])[1]"));
+		return this;
 	}
-	
-		
-	public void editContactById(int id) {
-		//add ()
-		click(By.xpath("(//img[@alt='Edit'])[" + (id+1) + "]"));
-	}
-
-	public void deleteContact(int id) {
+	public ContactHelper submitContactDeletion(int id) {
 		editContactById(id);
 		click(By.xpath("(//input[@name='update'])[2]"));
-		}
-	
-	//----------------------------
+		return this;
+	}
+		
+	public ContactHelper editContactById(int id) {
+		//add ()
+		click(By.xpath("(//img[@alt='Edit'])[" + (id+1) + "]"));
+		return this;
+	}
+
+
+	//-----------------------------------------------------------------------------------------------------------------
 	private SortedListOf<ContactData> cachedContacts;
 	
 	
@@ -85,18 +129,13 @@ public class ContactHelper extends HelperBase {
 		}
 		return cachedContacts;
 	}
+
+
 	
-	private void rebuildCache() {
-		cachedContacts = new SortedListOf<ContactData>();
-		
-		manager.navigateTo().mainPage();
-		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
-		for (WebElement checkbox : checkboxes) {
-			String title = checkbox.getAttribute("title");
-			String firstname = title.substring("Select (".length(), title.length() - ")".length());
-			cachedContacts.add(new ContactData().withFirstname(firstname)); 
-		}
-	}
+	
+	
+
+	
 	
 	//----------------------------
 	
