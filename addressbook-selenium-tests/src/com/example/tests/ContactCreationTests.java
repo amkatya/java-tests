@@ -22,7 +22,7 @@ public class ContactCreationTests extends TestBase {
 	SortedListOf<ContactData> oldList = app.getContactHelper().getContacts();
     
     // actions //lesson 4, ~18min
-	app.getContactHelper().createContact(contact);
+	app.getContactHelper().createContact(contact, CREATION);
 	
     
     // save new state

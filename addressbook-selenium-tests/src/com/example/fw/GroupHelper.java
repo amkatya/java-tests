@@ -83,6 +83,7 @@ public class GroupHelper extends HelperBase {
 		cachedGroups = null;
 		return this;
 		}
+	
 	public GroupHelper returnToGroupsPage() {
 	    click(By.linkText("group page"));
 	    return this;

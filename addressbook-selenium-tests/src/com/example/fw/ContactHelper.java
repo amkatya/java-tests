@@ -22,7 +22,14 @@ public class ContactHelper extends HelperBase {
 		super(manager);
 	}
 	
+	private SortedListOf<ContactData> cachedContacts;	
 	
+	public SortedListOf<ContactData> getContacts() {
+		if (cachedContacts == null){
+			rebuildCache();
+		}
+		return cachedContacts;
+	}
 	private void rebuildCache() {
 		cachedContacts = new SortedListOf<ContactData>();
 		manager.navigateTo().mainPage();
@@ -34,12 +41,13 @@ public class ContactHelper extends HelperBase {
 		}
 	}
 	
-	public ContactHelper createContact(ContactData contact) {
+	public ContactHelper createContact(ContactData contact, boolean CREATION) {
 		manager.navigateTo().mainPage();
 		initContactCreation();
 		fillContactForm(contact, CREATION);
 		submitContactCreation();
 		returnToHomePage();
+		rebuildCache();
 		return this;
 	}
 	
@@ -49,6 +57,7 @@ public class ContactHelper extends HelperBase {
 		fillContactForm(contact, MODIFICATION);
 		submitContactModification();
 		returnToHomePage();
+		rebuildCache();
 		return this;
 	}
 	
@@ -56,6 +65,7 @@ public class ContactHelper extends HelperBase {
 		manager.navigateTo().mainPage();
 		submitContactDeletion(id);
 		returnToHomePage();
+		rebuildCache();
 		return this;
 		}
 
@@ -94,6 +104,7 @@ public class ContactHelper extends HelperBase {
 
 	public ContactHelper submitContactCreation() {
 		driver.findElement(By.name("submit")).click();
+		cachedContacts = null;
 		return this;
 	}
 
@@ -104,11 +115,13 @@ public class ContactHelper extends HelperBase {
 	
 	public ContactHelper submitContactModification() {
 		click(By.xpath("(//input[@name='update'])[1]"));
+		cachedContacts = null;
 		return this;
 	}
 	public ContactHelper submitContactDeletion(int id) {
 		editContactById(id);
 		click(By.xpath("(//input[@name='update'])[2]"));
+		cachedContacts = null;
 		return this;
 	}
 		
@@ -120,15 +133,6 @@ public class ContactHelper extends HelperBase {
 
 
 	//-----------------------------------------------------------------------------------------------------------------
-	private SortedListOf<ContactData> cachedContacts;
-	
-	
-	public SortedListOf<ContactData> getContacts() {
-		if (cachedContacts == null){
-			rebuildCache();
-		}
-		return cachedContacts;
-	}
 
 
 	
