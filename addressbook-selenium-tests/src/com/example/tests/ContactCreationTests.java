@@ -1,13 +1,15 @@
 
 package com.example.tests;
 
-import static com.example.fw.ContactHelper.CREATION;
-import static org.hamcrest.Matchers.equalTo;
+
+import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.DataProvider;
 
 import com.example.utils.SortedListOf;
+
 
 public class ContactCreationTests extends TestBase {
 	
@@ -16,13 +18,13 @@ public class ContactCreationTests extends TestBase {
   public void testContactCreationWithValidData(ContactData contact) throws Exception {
 	
 	  
-	//app.navigateTo().mainPage();
+	app.navigateTo().mainPage();
 	
 	// save old state
 	SortedListOf<ContactData> oldList = app.getContactHelper().getContacts();
     
     // actions //lesson 4, ~18min
-	app.getContactHelper().createContact(contact, CREATION);
+	app.getContactHelper().createContact(contact);
 	
     
     // save new state

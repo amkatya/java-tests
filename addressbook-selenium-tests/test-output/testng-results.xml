@@ -2,16 +2,16 @@
 <testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4176" started-at="2017-04-12T14:58:46Z" finished-at="2017-04-12T14:58:50Z">
+  <suite name="Default suite" duration-ms="3671" started-at="2017-04-14T13:32:46Z" finished-at="2017-04-14T13:32:50Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4176" started-at="2017-04-12T14:58:46Z" finished-at="2017-04-12T14:58:50Z">
-      <class name="com.example.tests.ContactCreationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactCreationTests@1fd8905]" name="setUp" is-config="true" duration-ms="3805" started-at="2017-04-12T17:58:46Z" finished-at="2017-04-12T17:58:50Z">
+    <test name="Default test" duration-ms="3671" started-at="2017-04-14T13:32:46Z" finished-at="2017-04-14T13:32:50Z">
+      <class name="com.example.tests.ContactModificationTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactModificationTests@2edea6]" name="setUp" is-config="true" duration-ms="3274" started-at="2017-04-14T16:32:46Z" finished-at="2017-04-14T16:32:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@1fd8905]" name="testContactCreationWithValidData" duration-ms="0" started-at="2017-04-12T17:58:50Z" data-provider="randomValidContactGenerator" finished-at="2017-04-12T17:58:50Z">
+        <test-method status="SKIP" signature="modifySomeContact(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactModificationTests@2edea6]" name="modifySomeContact" duration-ms="0" started-at="2017-04-14T16:32:49Z" data-provider="randomValidContactGenerator" finished-at="2017-04-14T16:32:49Z">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
@@ -48,12 +48,12 @@ Some DataProvider public java.util.Iterator com.example.tests.TestBase.randomVal
           </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testContactCreationWithValidData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactCreationTests@1fd8905]" name="tearDown" is-config="true" duration-ms="357" started-at="2017-04-12T17:58:50Z" finished-at="2017-04-12T17:58:50Z">
+        </test-method> <!-- modifySomeContact -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactModificationTests@2edea6]" name="tearDown" is-config="true" duration-ms="383" started-at="2017-04-14T16:32:49Z" finished-at="2017-04-14T16:32:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.example.tests.ContactCreationTests -->
+      </class> <!-- com.example.tests.ContactModificationTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

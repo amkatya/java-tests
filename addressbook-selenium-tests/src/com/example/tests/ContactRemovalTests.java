@@ -1,9 +1,8 @@
 package com.example.tests;
 
-import static org.testng.Assert.assertEquals;
+import static org.hamcrest.Matchers.*;
+import static org.junit.Assert.assertThat;
 
-import java.util.Collections;
-import java.util.List;
 import java.util.Random;
 
 import org.testng.annotations.Test;
@@ -28,13 +27,15 @@ public class ContactRemovalTests extends TestBase {
 		app.getContactHelper().deleteContact(id);
 		
 		 // save new state
-		List<ContactData> newList =  app.getContactHelper().getContacts();
+		SortedListOf<ContactData> newList = app.getContactHelper().getContacts();
 	    
 	    
-	    // compare states  
-		oldList.remove(id);
-	    Collections.sort(oldList);
-	    Collections.sort(newList);
-	    assertEquals(newList, oldList);
+	    // compare states
+		assertThat(newList, equalTo(oldList.without(id)));
 	}
+	//	oldList.remove(id);
+	//    Collections.sort(oldList);
+	//    Collections.sort(newList);
+	//    assertEquals(newList, oldList);
+	//}
 }

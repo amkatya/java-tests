@@ -1,8 +1,5 @@
 package com.example.fw;
 
-import static com.example.fw.ContactHelper.CREATION;
-import static com.example.fw.ContactHelper.MODIFICATION;
-
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -41,7 +38,7 @@ public class ContactHelper extends HelperBase {
 		}
 	}
 	
-	public ContactHelper createContact(ContactData contact, boolean CREATION) {
+	public ContactHelper createContact(ContactData contact) {
 		manager.navigateTo().mainPage();
 		initContactCreation();
 		fillContactForm(contact, CREATION);

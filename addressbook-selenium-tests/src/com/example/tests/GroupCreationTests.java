@@ -1,6 +1,6 @@
 package com.example.tests;
 
-import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
 
 import org.testng.annotations.Test;

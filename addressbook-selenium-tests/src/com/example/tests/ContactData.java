@@ -14,7 +14,6 @@ public class ContactData implements Comparable<ContactData> {
 	private String byear;
 	private String secondaryaddress;
 	private String secondaryphone;
-	private int i;
 
 
 	public String getFirstname() {
@@ -56,13 +55,7 @@ public class ContactData implements Comparable<ContactData> {
 	public String getSecondaryphone() {
 		return secondaryphone;
 	}
-	public int getI() {
-		return i;
-	}
 	
-	public String randomDay() {
-		return bday;
-	}
 	
 	public ContactData() {	
 	}
@@ -91,7 +84,7 @@ public class ContactData implements Comparable<ContactData> {
 	}
 	
 	//Override
-	//ublic String toString() {
+	//public String toString() {
 	//return "ContactData [firstname=" + firstname + ", lastname=" + lastname
 	//		+ ", address=" + address + ", homephone=" + homephone
 	//		+ ", mobilephone=" + mobilephone + ", workphone=" + workphone
@@ -163,11 +156,11 @@ public class ContactData implements Comparable<ContactData> {
 		return this;
 	}
 	public ContactData withEmail2(String email2) {
-		emaill2 = email2;
+		this.emaill2 = email2;
 		return this;
 	}
 	public ContactData withBday(int i) {
-		this.i = 5;
+		this.bday = "5";
 		return this;
 	}
 	public ContactData withBmonth(String bmonth) {
@@ -175,7 +168,7 @@ public class ContactData implements Comparable<ContactData> {
 		return this;
 	}
 	public ContactData withByear(int i) {
-		this.i = 1985;
+		this.byear = "1985";
 		return this;
 	}
 	public ContactData withSecondaryaddress(String secondaryaddress) {
