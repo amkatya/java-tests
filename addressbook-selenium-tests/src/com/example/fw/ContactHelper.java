@@ -28,16 +28,30 @@ public class ContactHelper extends HelperBase {
 		return cachedContacts;
 	}
 	//lesson 3 - 12min; lesson 4 - 
+	//private void rebuildCache() {
+	//	cachedContacts = new SortedListOf<ContactData>();
+	//	manager.navigateTo().mainPage();
+	//	List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
+	//	for (WebElement checkbox : checkboxes) {
+	//		String title = checkbox.getAttribute("title");
+	//		String firstname = title.substring("Select (".length(), title.length() - ")".length());
+	//		cachedContacts.add(new ContactData().withFirstname(firstname)); 
+	//	}
+	//}
+	
+	
 	private void rebuildCache() {
 		cachedContacts = new SortedListOf<ContactData>();
 		manager.navigateTo().mainPage();
-		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
-		for (WebElement checkbox : checkboxes) {
+		List<WebElement> rows = driver.findElements(By.xpath("//tr[@name]"));
+		for (WebElement row : rows) {
 			String title = checkbox.getAttribute("title");
 			String firstname = title.substring("Select (".length(), title.length() - ")".length());
 			cachedContacts.add(new ContactData().withFirstname(firstname)); 
 		}
 	}
+	
+	
 	
 	public ContactHelper createContact(ContactData contact) {
 		manager.navigateTo().mainPage();
