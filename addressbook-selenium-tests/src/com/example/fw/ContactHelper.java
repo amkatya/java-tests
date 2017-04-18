@@ -27,6 +27,7 @@ public class ContactHelper extends HelperBase {
 		}
 		return cachedContacts;
 	}
+	//lesson 3 - 12min; lesson 4 - 
 	private void rebuildCache() {
 		cachedContacts = new SortedListOf<ContactData>();
 		manager.navigateTo().mainPage();

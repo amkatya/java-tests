@@ -50,7 +50,7 @@ public class TestBase {
 		}
 
 	@DataProvider
-	public Iterator<Object[]> randomValidContactGenerator(String May) {
+	public Iterator<Object[]> randomValidContactGenerator() {
 		List<Object[]> list = new ArrayList<Object[]>();
 		for (int i = 0; i < 5; i++){
 			ContactData contact = new ContactData()
@@ -62,9 +62,9 @@ public class TestBase {
 			.withWorkphone(generatorRandomString())
 			.withEmail1(generatorRandomString())
 			.withEmail2(generatorRandomString())
-			.withBday(5)
-			.withBmonth(May)
-			.withByear(1985)
+			.withBday(generateRandomNumber())
+			.withBmonth(generateRandomBmonth()))
+			.withByear(generateRandomNumber())
 			.withSecondaryaddress(generatorRandomString())
 			.withSecondaryphone(generatorRandomString());
 			list.add(new Object[]{contact});
@@ -96,6 +96,12 @@ public class TestBase {
 	//}
 
 
+
+	private int generateRandomNumber() {
+		Random rnd = new Random();
+		
+		return 0;
+	}
 
 	public String generatorRandomString() {
 		Random rnd = new Random();

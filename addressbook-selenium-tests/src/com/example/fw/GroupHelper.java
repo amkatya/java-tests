@@ -23,6 +23,7 @@ public class GroupHelper extends HelperBase {
 		return cachedGroups;
 	}
 	
+	//lesson 3 - 12min; 
 	private void rebuildCache() {
 		cachedGroups = new SortedListOf<GroupData>();
 		
